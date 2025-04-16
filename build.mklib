@@ -1,0 +1,29 @@
+# Please use mklib latest version to make this project!
+# This project was implemented for the 3.0 , But any latest mklib release can make this.
+# Written by ghgltggamer
+
+# Initialise the config
+extension (js);
+src (src);
+output_directory (ntk);
+output (ntk);
+
+# Make the core
+include (ntk);
+include (ntk.config);
+
+# Make dependencies / libraries
+include (lib/hlwtk);
+
+# Make Widgets
+include (widgets/ntk.widget);
+include (widgets/ntk.button);
+include (widgets/ntk.html);
+
+# Burn Theme
+append (document.head.innerHTML += `<style>);
+import (src/theme/ntk.light.css);
+append (`);
+
+# Make the project
+make ();

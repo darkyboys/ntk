@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ntk Test</title>
+</head>
+<body>
+    
+</body>
+<script src="ntk/ntk.js"></script>
+<script>
+    let icon = 'https://cdn.pixabay.com/photo/2013/07/12/15/55/laurel-wreath-150577_1280.png';
+    let dest = 'https://cdn.pixabay.com/photo/2025/04/12/11/42/clouds-9530011_1280.jpg';
+    let button = ntk_button_new ('Click me');
+    ntk_widget_render (button, document.body);
+    ntk_button_set_icon (button, icon);
+    ntk_button_set_icon (button, dest);
+    alert (ntk_button_get_icon (button));
+    // console.log (copy);
+</script>
+</html>
